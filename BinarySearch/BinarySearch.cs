@@ -9,6 +9,17 @@ namespace Logic
 {
     public class BinarySearch
     {
+        public static int [] CreationOfArray(int size)
+        {
+            int[] array = new int[size];
+            Random rand = new Random();
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = rand.Next(0, 1000);
+            }
+            Array.Sort(array);
+            return array;
+        }
         public static int BinarySearch_Iter(int[] array, int key)
         {
             int left = 0;
